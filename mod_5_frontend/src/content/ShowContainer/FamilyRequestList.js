@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RequestingMembers, from './RequestingMembers'
+// import RequestingMembers from './RequestingMembers'
 
 
 
@@ -9,7 +9,7 @@ class FamilyRequestList extends Component {
   render() {
     return (
       <div >
-        <RequestingMembers />
+        
        
         
       </div>
@@ -17,4 +17,6 @@ class FamilyRequestList extends Component {
   }
 }
 
-export default RequestingMembers;
+export default FamilyRequestList;
+
+/* <RequestingMembers /> */

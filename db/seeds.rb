@@ -65,7 +65,7 @@ p6= Post.create(
   subject: ""
 )
 p7= Post.create(
-    author: user5,
+  author: user5,
   title: "Angelo's last football game!",
   picture: "",
   body: "Football stories",
@@ -74,95 +74,163 @@ p7= Post.create(
 
 group1 = Group.create!(
   tree: t1,
-  name: "Grandparents-MomSide"
+  name: "Grandparents-MomSide",
+  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
+
 )
 
 group2= Group.create(
   tree: t2,
-  name: "Florez"
+  name: "Florez",
+  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
 )
 
 group3 = Group.create!(
   tree: t1,
-  name: "Uncle Dennis's Family"
+  name: "Uncle Dennis's Family",
+  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
 )
 
 group4= Group.create(
   tree: t1,
-  name: "Florez"
+  name: "Florez",
+  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
 )
 
 group5 = Group.create!(
   tree: t1,
-  name: "Immiediate Family"
+  name: "Immiediate Family",
+  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
 )
 
 group6= Group.create(
   tree: t1,
-  name: "Siblings"
+  name: "Siblings",
+  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
 )
+
+
 
 member1= Member.create(
-  tree_owner: user1,
-  family_member: user2,
+  group: group6,
+  family_member_type: User ,
+  family_member_id: 2,
   relationship: "Brother",
+
 )
 
+member2= Member.create(
+  group: group6,
+  family_member_type: User,
+  family_member_id: 5,
+  relationship: "Mom",
+)
+member3= Member.create(
+  group: group6,
+  family_member_type: User ,
+  family_member_id: 7,
+  relationship: "Sister",
+)
+member4= Member.create(
+  group: group3,
+  family_member_type: User ,
+  family_member_id: 7,
+  relationship: "llll",
+)
+member5= Member.create(
+  group: group3,
+  family_member_type: User ,
+  family_member_id: 6,
+  relationship: "hello",
+)
+member6= Member.create(
+  group: group2,
+  family_member_type: User,
+  family_member_id: 2,
+  relationship: "goodbye",
+)
 
-GroupsMember.create(
-  group: group5,
-  member: member1
-  )
+#
+# gm1= GroupsMember.create(
+#   group: group5,
+#   member: member1
+#   )
+#
+# gm2= GroupsMember.create(
+# group: group5,
+# member: member2
+# )
+# gm3= GroupsMember.create(
+# group: group5,
+# member: member3
+# )
+# gm4= GroupsMember.create(
+# group: group2,
+# member: member4
+# )
+# gm5= GroupsMember.create(
+#   group: group5,
+#   member: member5
+#   )
 
 
 member3= Member.create(
-  tree_owner: user1,
   family_member: user3,
   relationship: "Aunt"
 )
 
 
 member4= Member.create(
-  tree_owner: user2,
   family_member: user6,
   relationship: "Grandma"
 )
 
 member5= Member.create(
-  tree_owner: user1,
   family_member: user4,
   relationship: "Dad"
 )
 
 
 member6= Member.create(
-  tree_owner: user1,
   family_member: user5,
   relationship: "Mom",
- 
+
 )
 
 
 
 
 member7= Member.create(
-  tree_owner: user1,
   family_member: user6,
   relationship: "Grandma",
- 
+
 )
 
 
 member8= Member.create(
-  tree_owner: user2,
   family_member: user5,
   relationship: "Sister",
- 
+
 )
 
 member9= Member.create(
-  tree_owner: user2,
   family_member: user6,
   relationship: "Brother",
- 
+
+)
+
+nonuser1= NonUser.create(
+  name: "Great Great Cousin",
+  picture: "http://2.bp.blogspot.com/-Oh9xOVx5tso/U4JZO-Ao4wI/AAAAAAAAQz8/JON9ShbPYyo/s1600/Grandpa+Orem+Porch.jpg",
+  group: group3
+)
+nonuser2= NonUser.create(
+  name: "Great Great Grandma",
+  picture: "http://2.bp.blogspot.com/-Oh9xOVx5tso/U4JZO-Ao4wI/AAAAAAAAQz8/JON9ShbPYyo/s1600/Grandpa+Orem+Porch.jpg",
+  group: group1
+)
+nonuser3= NonUser.create(
+  name: "Great Great Papa",
+  picture: "http://2.bp.blogspot.com/-Oh9xOVx5tso/U4JZO-Ao4wI/AAAAAAAAQz8/JON9ShbPYyo/s1600/Grandpa+Orem+Porch.jpg",
+  group: group1
 )

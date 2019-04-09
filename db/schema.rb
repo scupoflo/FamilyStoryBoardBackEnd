@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_162230) do
+ActiveRecord::Schema.define(version: 2019_04_09_151417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,21 +18,25 @@ ActiveRecord::Schema.define(version: 2019_04_03_162230) do
   create_table "groups", force: :cascade do |t|
     t.integer "tree_id"
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "groups_members", force: :cascade do |t|
-    t.integer "group_id"
-    t.integer "member_id"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "members", force: :cascade do |t|
-    t.integer "tree_owner_id"
-    t.integer "family_member_id"
+    t.integer "group_id"
+    t.string "family_member_type"
+    t.bigint "family_member_id"
     t.string "relationship"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["family_member_type", "family_member_id"], name: "index_members_on_family_member_type_and_family_member_id"
+  end
+
+  create_table "non_users", force: :cascade do |t|
+    t.string "name"
+    t.string "picture"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

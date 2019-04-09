@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Member from './Member'
 
 class ApprovedMemberContainer extends Component {
   
@@ -6,7 +7,8 @@ class ApprovedMemberContainer extends Component {
   render() {
     return (
       <div >
-        <Member />
+        {this.props.allMembers.map(member => <Member key={member.id} member={member}/>)}
+        
         
       </div>
     );
