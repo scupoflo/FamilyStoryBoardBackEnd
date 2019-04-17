@@ -4,6 +4,8 @@ class CreateMembers < ActiveRecord::Migration[5.2]
       t.integer "group_id"
       t.references :family_member, polymorphic: true, index:true
       t.string "relationship"
+      t.string "name"
+      t.string "picture"
       t.timestamps
     end
   end

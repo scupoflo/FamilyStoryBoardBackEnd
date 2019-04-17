@@ -7,6 +7,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string "body"
       t.string "subject"
 
+      t.belongs_to :user, index: true, foreign_key: true
+
       t.timestamps
     end
   end

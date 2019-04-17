@@ -10,7 +10,7 @@ class Api::V1::GroupsController < ApplicationController
     end
 
     def create
-      group = Group.create(group_params)
+      group = Group.create!(group_params)
       render json: group, status: 201
     end
 

@@ -1,42 +1,61 @@
 class Api::V1::PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update]
+
     def index
       @posts = Post.all
       render json: @posts
     end
-  
+
     def show
-      @post = Post.find(params[:id])
-      render json: @post
+      render json: Post.find(params[:id])
     end
-    def new
-      @post = Post.new
-    end
-  
+
     def create
-      @post = Post.create(post_params)
-      @post.save
-      render json: @post, status: 201
+    post = Post.create!(post_params)
+    render json: post, status: 201
     end
-  
-    def edit
-    end
-  
+
+    # def create
+    #
+    #   @post = Post.new(
+    #     title: params[:post][:title],
+    #     author_id: params[:post][:author_id],
+    #     subject: params[:post][:subject],
+    #     body: params[:post][:body],
+    #     picture: params[:post][:picture]
+    #   )
+    #   byebug
+    #   if @post.valid?
+    #     @post.save
+    #     render json: @post, status: :accepted
+    #   end
+    # end
+
     def update
-      @post.update(post_params)
-      render json: @post, status: 202
+    set_post
+    @post.update(post_params)
+    render json: @post, status: 200
     end
-  
+
+    def destroy
+      post = Post.find(params[:id])
+      post.destroy
+      render json: {post:post}
+    end
+
+    def show
+      render json: @post, status: 200
+    end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
     end
-  
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, :picture, :subject, :author_id)
+      params.permit(:title, :body, :picture, :subject, :author_id, user: {})
     end
   end
-  
-  
+
+  # :something =>{} == something: {}

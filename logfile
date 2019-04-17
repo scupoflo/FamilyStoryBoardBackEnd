@@ -1,0 +1,104 @@
+2019-04-13 19:29:17.584 EDT [3185] LOG:  listening on IPv6 address "::1", port 5432
+2019-04-13 19:29:17.584 EDT [3185] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-04-13 19:29:17.588 EDT [3185] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-04-13 19:29:17.630 EDT [3187] LOG:  database system was shut down at 2019-04-13 19:29:10 EDT
+2019-04-13 19:29:17.643 EDT [3185] LOG:  database system is ready to accept connections
+2019-04-13 19:33:23.623 EDT [21876] FATAL:  database "mod_5_StoryBoard_development" does not exist
+2019-04-13 19:33:25.140 EDT [21879] FATAL:  database "mod_5_StoryBoard_development" does not exist
+2019-04-13 19:52:10.563 EDT [23737] ERROR:  database "mod_5_StoryBoard_development" is being accessed by other users
+2019-04-13 19:52:10.563 EDT [23737] DETAIL:  There is 1 other session using the database.
+2019-04-13 19:52:10.563 EDT [23737] STATEMENT:  DROP DATABASE IF EXISTS "mod_5_StoryBoard_development"
+2019-04-13 19:56:07.020 EDT [24119] ERROR:  relation "users" does not exist
+2019-04-13 19:56:07.020 EDT [24119] STATEMENT:  CREATE TABLE "posts" ("id" bigserial primary key, "author_id" integer, "title" character varying, "picture" character varying, "body" character varying, "subject" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	)
+2019-04-13 19:58:59.105 EDT [24303] ERROR:  relation "authors" does not exist
+2019-04-13 19:58:59.105 EDT [24303] STATEMENT:  CREATE TABLE "posts" ("id" bigserial primary key, "author_id" bigint, "title" character varying, "picture" character varying, "body" character varying, "subject" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_04d13ef8c7"
+	FOREIGN KEY ("author_id")
+	  REFERENCES "authors" ("id")
+	)
+2019-04-13 20:00:03.220 EDT [24395] ERROR:  relation "users" does not exist
+2019-04-13 20:00:03.220 EDT [24395] STATEMENT:  CREATE TABLE "posts" ("id" bigserial primary key, "author_id" integer, "title" character varying, "picture" character varying, "body" character varying, "subject" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	)
+2019-04-13 20:00:21.885 EDT [24429] ERROR:  database "mod_5_StoryBoard_development" already exists
+2019-04-13 20:00:21.885 EDT [24429] STATEMENT:  CREATE DATABASE "mod_5_StoryBoard_development" ENCODING = 'unicode'
+2019-04-13 20:00:21.917 EDT [24430] ERROR:  database "mod_5_StoryBoard_test" already exists
+2019-04-13 20:00:21.917 EDT [24430] STATEMENT:  CREATE DATABASE "mod_5_StoryBoard_test" ENCODING = 'unicode'
+2019-04-13 20:01:07.539 EDT [24538] ERROR:  database "mod_5_StoryBoard_development" already exists
+2019-04-13 20:01:07.539 EDT [24538] STATEMENT:  CREATE DATABASE "mod_5_StoryBoard_development" ENCODING = 'unicode'
+2019-04-13 20:01:07.566 EDT [24539] ERROR:  database "mod_5_StoryBoard_test" already exists
+2019-04-13 20:01:07.566 EDT [24539] STATEMENT:  CREATE DATABASE "mod_5_StoryBoard_test" ENCODING = 'unicode'
+2019-04-13 20:01:20.727 EDT [24568] ERROR:  relation "users" does not exist
+2019-04-13 20:01:20.727 EDT [24568] STATEMENT:  CREATE TABLE "posts" ("id" bigserial primary key, "author_id" integer, "title" character varying, "picture" character varying, "body" character varying, "subject" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	)
+2019-04-13 20:11:19.911 EDT [25407] ERROR:  database "mod_5_StoryBoard_development" is being accessed by other users
+2019-04-13 20:11:19.911 EDT [25407] DETAIL:  There is 1 other session using the database.
+2019-04-13 20:11:19.911 EDT [25407] STATEMENT:  DROP DATABASE IF EXISTS "mod_5_StoryBoard_development"
+2019-04-15 12:39:07.792 EDT [3192] LOG:  could not rename temporary statistics file "pg_stat_tmp/db_0.tmp" to "pg_stat_tmp/db_0.stat": No space left on device
+2019-04-15 12:39:07.980 EDT [3192] LOG:  could not rename temporary statistics file "pg_stat_tmp/global.tmp" to "pg_stat_tmp/global.stat": No space left on device
+2019-04-15 12:39:18.412 EDT [3191] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:39:18.553 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_17845.tmp": No space left on device
+2019-04-15 12:39:18.689 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_0.tmp": No space left on device
+2019-04-15 12:39:18.805 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+2019-04-15 12:39:27.630 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_0.tmp": No space left on device
+2019-04-15 12:39:27.744 EDT [3192] LOG:  could not rename temporary statistics file "pg_stat_tmp/global.tmp" to "pg_stat_tmp/global.stat": No space left on device
+2019-04-15 12:39:29.133 EDT [56127] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:39:38.173 EDT [3191] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:39:38.275 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_13364.tmp": No space left on device
+2019-04-15 12:39:38.384 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_0.tmp": No space left on device
+2019-04-15 12:39:38.467 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+2019-04-15 12:39:48.250 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_0.tmp": No space left on device
+2019-04-15 12:39:48.350 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+2019-04-15 12:39:48.786 EDT [56150] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:39:58.803 EDT [3191] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:39:58.904 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_0.tmp": No space left on device
+2019-04-15 12:39:59.012 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_17844.tmp": No space left on device
+2019-04-15 12:39:59.091 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+2019-04-15 12:40:07.717 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_0.tmp": No space left on device
+2019-04-15 12:40:07.814 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+2019-04-15 12:40:09.520 EDT [56166] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:40:18.357 EDT [3191] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:40:18.467 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_17845.tmp": No space left on device
+2019-04-15 12:40:18.564 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_0.tmp": No space left on device
+2019-04-15 12:40:18.654 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+2019-04-15 12:40:27.641 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/db_0.tmp": No space left on device
+2019-04-15 12:40:27.737 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+2019-04-15 12:40:29.031 EDT [56182] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:40:38.323 EDT [3191] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-15 12:41:07.823 EDT [3192] LOG:  could not close temporary statistics file "pg_stat_tmp/global.tmp": No space left on device
+2019-04-15 12:41:18.224 EDT [3191] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2019-04-17 13:13:31.366 EDT [31589] ERROR:  column "user_id" referenced in foreign key constraint does not exist
+2019-04-17 13:13:31.366 EDT [31589] STATEMENT:  ALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	
+2019-04-17 13:14:07.226 EDT [31636] ERROR:  column "user_id" referenced in foreign key constraint does not exist
+2019-04-17 13:14:07.226 EDT [31636] STATEMENT:  ALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	
+2019-04-17 13:14:56.347 EDT [31696] ERROR:  column "user_id" referenced in foreign key constraint does not exist
+2019-04-17 13:14:56.347 EDT [31696] STATEMENT:  ALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	
+2019-04-17 13:16:03.957 EDT [31777] ERROR:  column "user_id" referenced in foreign key constraint does not exist
+2019-04-17 13:16:03.957 EDT [31777] STATEMENT:  ALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	
+2019-04-17 13:16:48.337 EDT [31828] ERROR:  column "user_id" referenced in foreign key constraint does not exist
+2019-04-17 13:16:48.337 EDT [31828] STATEMENT:  ALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	
+2019-04-17 13:18:11.083 EDT [31921] ERROR:  column "user_id" referenced in foreign key constraint does not exist
+2019-04-17 13:18:11.083 EDT [31921] STATEMENT:  ALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+	FOREIGN KEY ("user_id")
+	  REFERENCES "users" ("id")
+	

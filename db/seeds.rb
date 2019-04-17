@@ -75,38 +75,38 @@ p7= Post.create(
 group1 = Group.create!(
   tree: t1,
   name: "Grandparents-MomSide",
-  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
+  picture: "https://i.postimg.cc/76s2qpkY/abuelitos.jpg"
 
 )
 
-group2= Group.create(
-  tree: t2,
-  name: "Florez",
-  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
-)
+# group2= Group.create(
+#   tree: t2,
+#   name: "Florez",
+#   picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
+# )
 
 group3 = Group.create!(
   tree: t1,
   name: "Uncle Dennis's Family",
-  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
+  picture: "https://i.postimg.cc/wB3t0wNC/cupo.jpg"
 )
 
 group4= Group.create(
   tree: t1,
   name: "Florez",
-  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
+  picture: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/304437_4411304956829_1310663438_n.jpg?_nc_cat=110&_nc_ht=scontent-iad3-1.xx&oh=dec509503586aecf8298b2bf22e48243&oe=5D508C0B"
 )
 
 group5 = Group.create!(
   tree: t1,
   name: "Immiediate Family",
-  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
+  picture: "https://i.postimg.cc/Hnv4Prxz/Sisters.jpg"
 )
 
 group6= Group.create(
   tree: t1,
   name: "Siblings",
-  picture: "https://www.family-action.org.uk/content/uploads/2017/11/Mixed-Raced-family-e1513084049363-600x320.jpg"
+  picture: "https://i.postimg.cc/bwDLW91t/Siblings.jpg"
 )
 
 
@@ -116,39 +116,48 @@ member1= Member.create(
   family_member_type: User ,
   family_member_id: 2,
   relationship: "Brother",
-
+  name: "Angelo Cupo",
+  picture: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/52464410_10213500268931487_1524950442209968128_n.jpg?_nc_cat=100&_nc_ht=scontent-iad3-1.xx&oh=b8340b6f26d0f4f3bd2cbe937b7fd9a9&oe=5D3EAEE2"
 )
 
 member2= Member.create(
   group: group6,
   family_member_type: User,
   family_member_id: 5,
-  relationship: "Mom",
+  relationship: "Sister",
+  name: "Vanessa Cupo",
+  picture: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/48406537_10213123448191204_3221601264458530816_n.jpg?_nc_cat=110&_nc_ht=scontent-iad3-1.xx&oh=7b88ba4b8578d15fe1b2c9a28a151b9c&oe=5D36D9D4"
 )
 member3= Member.create(
   group: group6,
   family_member_type: User ,
   family_member_id: 7,
   relationship: "Sister",
+  name: "Shana Cupo",
+  picture: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/37595593_10156669454627664_5562738846031937536_n.jpg?_nc_cat=107&_nc_ht=scontent-iad3-1.xx&oh=2bb3d378339b3addd25191ea443a9611&oe=5D4CDC4C"
 )
 member4= Member.create(
-  group: group3,
+  group: group4,
   family_member_type: User ,
   family_member_id: 7,
-  relationship: "llll",
+  relationship: "Aunt",
+  name: "Maite Florez",
+  picture:"https://i.postimg.cc/bwtdKZrJ/Maite.jpg"
 )
 member5= Member.create(
-  group: group3,
+  group: group4,
   family_member_type: User ,
   family_member_id: 6,
-  relationship: "hello",
+  relationship: "Cousin",
+  name: "Julian Florez",
+  picture: "https://i.postimg.cc/HLSwLJ0g/julian.jpg"
 )
-member6= Member.create(
-  group: group2,
-  family_member_type: User,
-  family_member_id: 2,
-  relationship: "goodbye",
-)
+# member6= Member.create(
+#   group: group2,
+#   family_member_type: User,
+#   family_member_id: 2,
+#   relationship: "goodbye",
+# )
 
 #
 # gm1= GroupsMember.create(

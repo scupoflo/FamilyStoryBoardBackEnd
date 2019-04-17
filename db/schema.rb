@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_09_151417) do
+ActiveRecord::Schema.define(version: 2019_04_14_001920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2019_04_09_151417) do
     t.string "family_member_type"
     t.bigint "family_member_id"
     t.string "relationship"
+    t.string "name"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["family_member_type", "family_member_id"], name: "index_members_on_family_member_type_and_family_member_id"
@@ -49,6 +51,8 @@ ActiveRecord::Schema.define(version: 2019_04_09_151417) do
     t.string "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "trees", force: :cascade do |t|
@@ -65,4 +69,5 @@ ActiveRecord::Schema.define(version: 2019_04_09_151417) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "posts", "users"
 end

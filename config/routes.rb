@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :groups
       resources :members
       resources :posts
+      resources :users
+      resources :nonusers
     end
   end
 end

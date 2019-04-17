@@ -1,4 +1,4 @@
 class Tree < ApplicationRecord
     has_many :groups
-    belongs_to :user
+    belongs_to :user, optional: true
 end
