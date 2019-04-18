@@ -10,8 +10,15 @@ class Api::V1::MembersController < ApplicationController
     end
 
     def create
-      member = Member.create!(member_params)
-      render json: member, status: 201
+      @group = Group.find_by(name: params[:group])
+      member_info = params[:member]
+      if @group != nil
+        member_info[:group_id] = @group.id
+        member = Member.create!(member_params)
+        # member = Member.create!(member_params)
+        render json: member, status: 201
+
+      end
     end
 
     def update
@@ -31,7 +38,7 @@ class Api::V1::MembersController < ApplicationController
 
     private
     def member_params
-      params.permit(:relationship, :name, :picture)
+      params.require(:member).permit(:relationship, :name, :picture, :group_id)
     end
 
     def set_note

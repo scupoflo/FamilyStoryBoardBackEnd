@@ -88,25 +88,25 @@ group1 = Group.create!(
 group3 = Group.create!(
   tree: t1,
   name: "Uncle Dennis's Family",
-  picture: "https://i.postimg.cc/wB3t0wNC/cupo.jpg"
+  picture: "https://i.imgur.com/X25szaHm.jpg"
 )
 
 group4= Group.create(
   tree: t1,
   name: "Florez",
-  picture: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/304437_4411304956829_1310663438_n.jpg?_nc_cat=110&_nc_ht=scontent-iad3-1.xx&oh=dec509503586aecf8298b2bf22e48243&oe=5D508C0B"
+  picture: "https://i.imgur.com/e81MKicm.jpg"
 )
 
 group5 = Group.create!(
   tree: t1,
   name: "Immiediate Family",
-  picture: "https://i.postimg.cc/Hnv4Prxz/Sisters.jpg"
+  picture: "https://i.imgur.com/4xqkYmCm.jpg"
 )
 
 group6= Group.create(
   tree: t1,
   name: "Siblings",
-  picture: "https://i.postimg.cc/bwDLW91t/Siblings.jpg"
+  picture: "https://i.imgur.com/zGZTDWlm.jpg"
 )
 
 
@@ -117,7 +117,7 @@ member1= Member.create(
   family_member_id: 2,
   relationship: "Brother",
   name: "Angelo Cupo",
-  picture: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/52464410_10213500268931487_1524950442209968128_n.jpg?_nc_cat=100&_nc_ht=scontent-iad3-1.xx&oh=b8340b6f26d0f4f3bd2cbe937b7fd9a9&oe=5D3EAEE2"
+  picture: "https://i.imgur.com/6qqQqcom.jpg"
 )
 
 member2= Member.create(
@@ -126,7 +126,7 @@ member2= Member.create(
   family_member_id: 5,
   relationship: "Sister",
   name: "Vanessa Cupo",
-  picture: "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/48406537_10213123448191204_3221601264458530816_n.jpg?_nc_cat=110&_nc_ht=scontent-iad3-1.xx&oh=7b88ba4b8578d15fe1b2c9a28a151b9c&oe=5D36D9D4"
+  picture: "https://i.imgur.com/ybqxMSvm.jpg"
 )
 member3= Member.create(
   group: group6,
